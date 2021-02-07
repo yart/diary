@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+cd $(cat /home/${USER}/.config/diary/local.path) && bundle exec ruby diary.rb "$@"
