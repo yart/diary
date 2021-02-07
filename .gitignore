@@ -52,4 +52,4 @@ public/ruby_code/*
 /db/schema.rb
 /db/secondary_schema.rb
 
-/records
+/records/
