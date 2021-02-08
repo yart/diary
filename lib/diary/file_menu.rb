@@ -4,7 +4,7 @@ class Diary
   private
   
   def file_menu
-    prompt  = TTY::Prompt.new
+    prompt  = TTY::Prompt.new(quiet: true)
     files   = Dir.children("#{@project_dir}records/").sort { |a, b| b.to_i <=> a.to_i }
     choices = []
     
