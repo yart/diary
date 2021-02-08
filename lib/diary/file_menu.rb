@@ -5,7 +5,7 @@ class Diary
   
   def file_menu
     prompt  = TTY::Prompt.new
-    files   = Dir.children("#{@project_dir}records/")
+    files   = Dir.children("#{@project_dir}records/").sort { |a, b| b.to_i <=> a.to_i }
     choices = []
     
     files.each do |file|
