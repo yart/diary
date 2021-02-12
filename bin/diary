@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+
+require 'bundler'
+require 'bundler/cli'
+require 'bundler/setup' # Set up gems listed in the Gemfile
+require_relative '../lib/diary'
+
+Bundler.require
+
+Diary.new(File.expand_path('..', __dir__)) #.open
+
+args = %w[exec diary] + ARGV
+
+Bundler::CLI.start(args)

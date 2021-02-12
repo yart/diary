@@ -15,9 +15,11 @@ require_relative 'diary/prettify_name'
 class Diary
   
   def initialize(dir)
-    params
-    @project_dir = File.read("/home/#{ENV['USER']}/.config/#{dir.split('/').last.downcase}/local.path").strip
-    @timestamp   = Time.now.to_s.gsub(%r{^(?<yr>\d{4}).(?<mo>\d{2}).(?<dy>\d{2}).(?<ho>\d{2}).(?<mi>\d{2}).*}, '\k<yr>\k<mo>\k<dy>\k<ho>\k<mi>')
+    p dir
+    p __dir__
+    # params
+    # @project_dir = File.read("/home/#{ENV['USER']}/.config/#{dir.split('/').last.downcase}/local.path").strip
+    # @timestamp   = Time.now.to_s.gsub(%r{^(?<yr>\d{4}).(?<mo>\d{2}).(?<dy>\d{2}).(?<ho>\d{2}).(?<mi>\d{2}).*}, '\k<yr>\k<mo>\k<dy>\k<ho>\k<mi>')
   end
   
 end
